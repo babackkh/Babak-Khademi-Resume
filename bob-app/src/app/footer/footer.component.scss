@@ -1,0 +1,28 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 210px;
+
+  .buttons {
+    margin-left: 6.5%;
+
+    button {
+      margin-right: 10%;
+    }
+  }
+
+  .footer-logo {
+    text-align: right;
+    margin-right: 5%;
+    transform: translateY(137px);
+    transition: transform 0.4s ease-in;
+
+    .mat-title {
+      margin: 0;
+    }
+  }
+}
+
+.translate-onscroll {
+  transform: translateY(0) !important;
+}

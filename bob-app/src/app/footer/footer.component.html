@@ -1,0 +1,22 @@
+<footer>
+  <mat-toolbar class="footer">
+    <div class="buttons">
+      <button
+        mat-icon-button
+        type="button"
+        disableRipple
+        (click)="onMusicIconClick()"
+      >
+        <mat-icon [svgIcon]="musicStatusIcon"></mat-icon>
+      </button>
+      <button mat-icon-button type="button" disableRipple>
+        <mat-icon svgIcon="instagram"></mat-icon>
+      </button>
+    </div>
+    <div class="spacer"></div>
+    <div class="footer-logo" id="footer-logo">
+      <div class="mat-title">BABAK KHADEMI</div>
+      <div class="mat-caption">Fullstack Web Developer</div>
+    </div>
+  </mat-toolbar>
+</footer>
