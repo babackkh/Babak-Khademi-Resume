@@ -22,7 +22,7 @@ export class AppComponent implements AfterViewInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollFromTop = this.documenty.documentElement.scrollTop;
-
+    console.log(scrollFromTop);
     if (scrollFromTop > 120) {
       this.documenty
         .getElementById('footer-logo')
@@ -34,12 +34,6 @@ export class AppComponent implements AfterViewInit {
     } else if (scrollFromTop > 570) {
       this.documenty.getElementById('sec-2').classList.remove('sec-active');
     }
-  }
-
-  @HostListener('window:scroll', [])
-  onWindowScroll2() {
-    const scrollFromTop = this.documenty.documentElement.scrollTop;
-
     if (scrollFromTop < 570) {
       this.documenty.getElementById('sec-1').classList.add('sec-active');
       this.documenty.getElementById('sec-2').classList.remove('sec-active');
@@ -50,10 +44,23 @@ export class AppComponent implements AfterViewInit {
       this.documenty.getElementById('sec-3').classList.add('sec-active');
       this.documenty.getElementById('sec-2').classList.remove('sec-active');
     }
-    /* } else if (scrollFromTop > 570) {
-      this.documenty.getElementById('sec-2').classList.remove('sec-active');
-    } */
   }
+
+  /* @HostListener('window:scroll', [])
+  onWindowScroll2() {
+    const scrollFromTop = this.documenty.documentElement.scrollTop;
+    console.log(scrollFromTop);
+    if (scrollFromTop < 570) {
+      this.documenty.getElementById('sec-1').classList.add('sec-active');
+      this.documenty.getElementById('sec-2').classList.remove('sec-active');
+    } else if (scrollFromTop > 570) {
+      this.documenty.getElementById('sec-2').classList.add('sec-active');
+      this.documenty.getElementById('sec-1').classList.remove('sec-active');
+    } else if (scrollFromTop > 1140) {
+      this.documenty.getElementById('sec-3').classList.add('sec-active');
+      this.documenty.getElementById('sec-2').classList.remove('sec-active');
+    }
+  } */
 
   ngAfterViewInit() {
     this.onWindowScrollInit();
